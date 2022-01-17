@@ -1,71 +1,40 @@
 from tkinter import *
 expression = ""
 def press(num):
-
                 global expression
-
                 expression = expression + str(num)
-
                 equation.set(expression)
 
  
 def equalpress():
 
                 try:
-
- 
-
                                 global expression
-
                                 total = str(eval(expression))
-
                                 equation.set(total)
-
                                 expression = ""
-
- 
 
                 except:
-
- 
-
-                                equation.set("SYNTAX ERROR")
-
+                                equation.set("Invalid Input")
                                 expression = ""
 
- 
-
 def clear():
-
                 global expression
-
                 expression = ""
-
                 equation.set("")
 
- 
-
 if __name__ == "__main__":
-
-   
-
                 wn = Tk()
-
                 wn.configure(background="light grey")
-
                 wn.title("Calculator")
-
                 wn.geometry("810x450")
-
                 equation = StringVar()
-
                 expression_field = Entry(wn, textvariable=equation)
-
                 expression_field.grid(columnspan=4, ipadx=250)
 
  
 
-                button1 = Button(wn, text=' 1 ', fg='black', bg='blue',
+                button1 = Button(wn, text=' 1 ', fg='black', bg='red',
 
                                                                                 command=lambda: press(1), height=3, width=21)
 
@@ -73,7 +42,7 @@ if __name__ == "__main__":
 
  
 
-                button2 = Button(wn, text=' 2 ', fg='black', bg='blue',
+                button2 = Button(wn, text=' 2 ', fg='black', bg='red',
 
                                                                                 command=lambda: press(2), height=3, width=21)
 
@@ -81,7 +50,7 @@ if __name__ == "__main__":
 
  
 
-                button3 = Button(wn, text=' 3 ', fg='black', bg='blue',
+                button3 = Button(wn, text=' 3 ', fg='black', bg='red',
 
                                                                                 command=lambda: press(3), height=3, width=21)
 
@@ -89,7 +58,7 @@ if __name__ == "__main__":
 
  
 
-                button4 = Button(wn, text=' 4 ', fg='black', bg='blue',
+                button4 = Button(wn, text=' 4 ', fg='black', bg='red',
 
                                                                                 command=lambda: press(4), height=3, width=21)
 
@@ -97,7 +66,7 @@ if __name__ == "__main__":
 
  
 
-                button5 = Button(wn, text=' 5 ', fg='black', bg='blue',
+                button5 = Button(wn, text=' 5 ', fg='black', bg='red',
 
                                                                                 command=lambda: press(5), height=3, width=21)
 
@@ -105,7 +74,7 @@ if __name__ == "__main__":
 
  
 
-                button6 = Button(wn, text=' 6 ', fg='black', bg='blue',
+                button6 = Button(wn, text=' 6 ', fg='black', bg='red',
 
                                                                                 command=lambda: press(6), height=3, width=21)
 
@@ -113,7 +82,7 @@ if __name__ == "__main__":
 
  
 
-                button7 = Button(wn, text=' 7 ', fg='black', bg='blue',
+                button7 = Button(wn, text=' 7 ', fg='black', bg='red',
 
                                                                                 command=lambda: press(7), height=3, width=21)
 
@@ -121,7 +90,7 @@ if __name__ == "__main__":
 
  
 
-                button8 = Button(wn, text=' 8 ', fg='black', bg='blue',
+                button8 = Button(wn, text=' 8 ', fg='black', bg='red',
 
                                                                                 command=lambda: press(8), height=3, width=21)
 
@@ -129,7 +98,7 @@ if __name__ == "__main__":
 
  
 
-                button9 = Button(wn, text=' 9 ', fg='black', bg='blue',
+                button9 = Button(wn, text=' 9 ', fg='black', bg='red',
 
                                                                                 command=lambda: press(9), height=3, width=21)
 
@@ -137,7 +106,7 @@ if __name__ == "__main__":
 
  
 
-                button0 = Button(wn, text=' 0 ', fg='black', bg='blue',
+                button0 = Button(wn, text=' 0 ', fg='black', bg='red',
 
                                                                                 command=lambda: press(0), height=3, width=21)
 
@@ -145,7 +114,7 @@ if __name__ == "__main__":
 
  
 
-                plus = Button(wn, text=' + ', fg='black', bg='blue',
+                plus = Button(wn, text=' + ', fg='black', bg='red',
 
                                                                 command=lambda: press("+"), height=3, width=21)
 
@@ -153,7 +122,7 @@ if __name__ == "__main__":
 
  
 
-                minus = Button(wn, text=' - ', fg='black', bg='blue',
+                minus = Button(wn, text=' - ', fg='black', bg='red',
 
                                                                 command=lambda: press("-"), height=3, width=21)
 
@@ -161,7 +130,7 @@ if __name__ == "__main__":
 
  
 
-                multiply = Button(wn, text=' × ', fg='black', bg='blue',
+                multiply = Button(wn, text=' × ', fg='black', bg='red',
 
                                                                                 command=lambda: press("*"), height=3, width=21)
 
@@ -169,7 +138,7 @@ if __name__ == "__main__":
 
  
 
-                divide = Button(wn, text=' ÷ ', fg='black', bg='blue',
+                divide = Button(wn, text=' ÷ ', fg='black', bg='red',
 
                                                                                 command=lambda: press("/"), height=3, width=21)
 
@@ -177,7 +146,7 @@ if __name__ == "__main__":
 
  
 
-                equal = Button(wn, text=' = ', fg='black', bg='blue',
+                equal = Button(wn, text=' = ', fg='black', bg='red',
 
                                                                 command=equalpress, height=3, width=21)
 
@@ -185,7 +154,7 @@ if __name__ == "__main__":
 
  
 
-                clear = Button(wn, text='Clear', fg='black', bg='blue',
+                clear = Button(wn, text='Clear', fg='black', bg='red',
 
                                                                 command=clear, height=3, width=21)
 
@@ -193,12 +162,9 @@ if __name__ == "__main__":
 
  
 
-                Decimal= Button(wn, text='.', fg='black', bg='blue',
+                Decimal= Button(wn, text='.', fg='black', bg='red',
 
                                                                                 command=lambda: press('.'), height=3, width=21)
 
                 Decimal.grid(row=6, column=0)
-
-   
-
                 wn.mainloop()
